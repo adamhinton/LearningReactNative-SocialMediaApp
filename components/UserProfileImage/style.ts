@@ -7,11 +7,6 @@ const style = StyleSheet.create({
     padding: 3,
     borderRadius: 50,
   },
-  image: {
-    width: 65,
-    height: 65,
-    borderRadius: 50,
-  },
 });
 
 export default style;
