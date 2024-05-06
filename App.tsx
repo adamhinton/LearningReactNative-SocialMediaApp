@@ -1,27 +1,33 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
-import {SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
+import {
+  FlatList,
+  ImageSourcePropType,
+  SafeAreaView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {getFontFamily} from './assets/fonts/helper';
 import Title from './components/Title/Title';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
 import globalStyle from './assets/styles/globalStyles';
+import UserStory from './components/UserStory/UserStory';
 
-type UserStory = {
+export type UserStoryType = {
   firstName: string;
-  id: number;
-  profileImage: URL;
+  id?: number;
+  profileImage: ImageSourcePropType;
 };
 
 const App = () => {
-  const userStories: UserStory[] = [
+  const userStories: UserStoryType[] = [
     {
       firstName: 'Joseph',
       id: 1,
       profileImage: require('./assets/images/default_profile.png'),
     },
-
-    // Eight more user stories. Ids in ascending order. Names are : Angel, White, Olivier, Nata, Nicolas, Nino, Nana, Adam
     {
       firstName: 'Angel',
       id: 2,
@@ -74,6 +80,21 @@ const App = () => {
             <Text style={globalStyle.messageNumber}>2</Text>
           </View>
         </TouchableOpacity>
+      </View>
+      <View style={globalStyle.userStoryContainer}>
+        <FlatList
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          data={userStories}
+          renderItem={({item}) => {
+            return (
+              <UserStory
+                profileImage={item.profileImage}
+                firstName={item.firstName}
+              />
+            );
+          }}
+        />
       </View>
     </SafeAreaView>
   );
