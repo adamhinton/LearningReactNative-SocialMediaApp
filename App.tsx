@@ -1,7 +1,6 @@
-/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
-import {SafeAreaView, TouchableOpacity, View} from 'react-native';
+import {SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
 import {getFontFamily} from './assets/fonts/helper';
 import Title from './components/Title/Title';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
@@ -13,14 +12,11 @@ const App = () => {
     <SafeAreaView>
       <View style={globalStyle.header}>
         <Title title={"Let's explore"} />
-        <TouchableOpacity
-          style={{
-            padding: 14,
-            // I changed this to make it easier to see
-            backgroundColor: '#bfd2e4',
-            borderRadius: 100,
-          }}>
-          <FontAwesomeIcon icon={faEnvelope} color="898DAE" />
+        <TouchableOpacity style={globalStyle.messageIcon}>
+          <FontAwesomeIcon icon={faEnvelope} size={20} color="#898DAE" />
+          <View style={globalStyle.messageNumberContainer}>
+            <Text style={globalStyle.messageNumber}>2</Text>
+          </View>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
