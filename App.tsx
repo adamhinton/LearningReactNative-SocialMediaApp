@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from 'react';
+import React, {useState} from 'react';
 import {
   FlatList,
   ImageSourcePropType,
@@ -8,12 +8,13 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {getFontFamily} from './assets/fonts/helper';
 import Title from './components/Title/Title';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
 import globalStyle from './assets/styles/globalStyles';
 import UserStory from './components/UserStory/UserStory';
+
+// each userstory batch will contain four items
 
 export type UserStoryType = {
   firstName: string;
@@ -69,6 +70,14 @@ const App = () => {
       profileImage: require('./assets/images/default_profile.png'),
     },
   ];
+
+  // num userStorys per render
+  const userStoriesPageSize = 4;
+  const [userStoriesCurrentPage, setUserStoriesCurrentPage] = useState(1);
+  const [userStoriesRenderedData, setUserStoriesRenderedData] = useState<
+    UserStoryType[]
+  >([]);
+  const [isLoadingUserStories, setIsLoadingUserStories] = useState(false);
 
   return (
     <SafeAreaView>
