@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   FlatList,
   ImageSourcePropType,
@@ -79,6 +79,28 @@ const App = () => {
   >([]);
   const [isLoadingUserStories, setIsLoadingUserStories] = useState(false);
 
+  // Subsection of UserSTorys
+  const pagination = (
+    database: UserStoryType[],
+    currentPage: number,
+    // UserStorys per page
+    pageSize: number,
+  ): UserStoryType[] => {
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    if (startIndex >= database.length) {
+      return [];
+    }
+
+    return database.slice(startIndex, endIndex);
+  };
+
+  useEffect(() => {
+    setIsLoadingUserStories(true);
+
+    setIsLoadingUserStories(false);
+  }, []);
+
   return (
     <SafeAreaView>
       <View style={globalStyle.header}>
@@ -94,7 +116,7 @@ const App = () => {
         <FlatList
           horizontal={true}
           showsHorizontalScrollIndicator={false}
-          data={userStories}
+          data={userStoriesRenderedData}
           renderItem={({item}) => {
             return (
               <UserStory
