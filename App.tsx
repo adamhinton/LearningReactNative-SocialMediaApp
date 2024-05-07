@@ -98,6 +98,9 @@ const App = () => {
   useEffect(() => {
     setIsLoadingUserStories(true);
 
+    const getInitialData = pagination(userStories, 1, userStoriesPageSize);
+    setUserStoriesRenderedData(getInitialData);
+
     setIsLoadingUserStories(false);
   }, []);
 
@@ -114,6 +117,8 @@ const App = () => {
       </View>
       <View style={globalStyle.userStoryContainer}>
         <FlatList
+          // 0.5 means 50%
+          onEndReachedThreshold={0.5}
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           data={userStoriesRenderedData}
