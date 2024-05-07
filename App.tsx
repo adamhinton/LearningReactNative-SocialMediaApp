@@ -13,6 +13,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
 import globalStyle from './assets/styles/globalStyles';
 import UserStory from './components/UserStory/UserStory';
+import UserProfileImage from './components/UserProfileImage/UserProfileImage';
 
 // each userstory batch will contain four items
 
@@ -102,6 +103,7 @@ const App = () => {
     setUserStoriesRenderedData(getInitialData);
 
     setIsLoadingUserStories(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -119,12 +121,29 @@ const App = () => {
         <FlatList
           // 0.5 means 50%
           onEndReachedThreshold={0.5}
+          onEndReached={() => {
+            if (isLoadingUserStories) {
+              return;
+            }
+            setIsLoadingUserStories(true);
+            const contentToAppend = pagination(
+              userStories,
+              userStoriesCurrentPage + 1,
+              userStoriesPageSize,
+            );
+            if (contentToAppend.length > 0) {
+              setUserStoriesCurrentPage(userStoriesCurrentPage + 1);
+              setUserStoriesRenderedData(prev => [...prev, ...contentToAppend]);
+            }
+            setIsLoadingUserStories(false);
+          }}
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           data={userStoriesRenderedData}
           renderItem={({item}) => {
             return (
               <UserStory
+                key={'userStory' + item.id}
                 profileImage={item.profileImage}
                 firstName={item.firstName}
               />
