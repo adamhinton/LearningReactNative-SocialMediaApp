@@ -72,6 +72,65 @@ const App = () => {
     },
   ];
 
+  // userPost type
+  type UserPostType = {
+    firstName: string;
+    lastName: string;
+    location: string;
+    likes: number;
+    comments: number;
+    bookmarks: number;
+    id: number;
+  };
+
+  const userPosts: UserPostType[] = [
+    {
+      firstName: 'Allison',
+      lastName: 'Becker',
+      location: 'Boston, MA',
+      likes: 1201,
+      comments: 24,
+      bookmarks: 55,
+      id: 1,
+    },
+    {
+      firstName: 'Jennifer',
+      lastName: 'Wilson',
+      location: 'Worcester, MA',
+      likes: 1301,
+      comments: 25,
+      bookmarks: 70,
+      id: 2,
+    },
+    {
+      firstName: 'Adam',
+      lastName: 'Spera',
+      location: 'Worcester, MA',
+      likes: 100,
+      comments: 8,
+      bookmarks: 3,
+      id: 3,
+    },
+    {
+      firstName: 'Nata',
+      lastName: 'Vaicheshvili',
+      location: 'New York, NY',
+      likes: 200,
+      comments: 16,
+      bookmarks: 7,
+      id: 4,
+    },
+    {
+      firstName: 'Nicolas',
+      lastName: 'Namoradze',
+      location: 'Berlin, DE',
+      likes: 2000,
+      comments: 32,
+      bookmarks: 12,
+      id: 5,
+    },
+  ];
+
   // num userStorys per render
   const userStoriesPageSize = 4;
   const [userStoriesCurrentPage, setUserStoriesCurrentPage] = useState(1);
@@ -79,6 +138,14 @@ const App = () => {
     UserStoryType[]
   >([]);
   const [isLoadingUserStories, setIsLoadingUserStories] = useState(false);
+
+  // num userPosts per render
+  const userPostsPageSize = 4;
+  const [userPostsCurrentPage, setUserPostsCurrentPage] = useState(1);
+  const [userPostsRenderedData, setUserPostsRenderedData] = useState<
+    UserPostType[]
+  >([]);
+  const [isLoadingUserPosts, setIsLoadingUserPosts] = useState(false);
 
   // Subsection of UserSTorys
   const pagination = (
