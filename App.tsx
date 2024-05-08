@@ -13,7 +13,6 @@ import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
 import globalStyle from './assets/styles/globalStyles';
 import UserStory from './components/UserStory/UserStory';
-import UserProfileImage from './components/UserProfileImage/UserProfileImage';
 
 // each userstory batch will contain four items
 
@@ -176,7 +175,9 @@ const App = () => {
   return (
     <SafeAreaView>
       <View style={globalStyle.header}>
+        {/* TITLE */}
         <Title title={"Let's explore"} />
+        {/* MESSAGE */}
         <TouchableOpacity style={globalStyle.messageIcon}>
           <FontAwesomeIcon icon={faEnvelope} size={20} color="#898DAE" />
           <View style={globalStyle.messageNumberContainer}>
@@ -184,6 +185,7 @@ const App = () => {
           </View>
         </TouchableOpacity>
       </View>
+      {/* FRIENDS */}
       <View style={globalStyle.userStoryContainer}>
         <FlatList
           // 0.5 means 50%
@@ -217,6 +219,13 @@ const App = () => {
             );
           }}
         />
+      </View>
+      {/* POSTS */}
+      <View>
+        <FlatList>
+          {' '}
+          data={} renderItem={item => {}}
+        </FlatList>
       </View>
     </SafeAreaView>
   );
