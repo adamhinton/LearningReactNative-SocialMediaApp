@@ -13,6 +13,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
 import globalStyle from './assets/styles/globalStyles';
 import UserStory from './components/UserStory/UserStory';
+import UserPost from './components/UserPost/UserPost';
 
 // each userstory batch will contain four items
 
@@ -79,6 +80,8 @@ const App = () => {
     likes: number;
     comments: number;
     bookmarks: number;
+    profileImage: any;
+    image: any;
     id: number;
   };
 
@@ -90,6 +93,8 @@ const App = () => {
       likes: 1201,
       comments: 24,
       bookmarks: 55,
+      image: require('./assets/images/default_post.png'),
+      profileImage: require('./assets/images/default_profile.png'),
       id: 1,
     },
     {
@@ -99,6 +104,8 @@ const App = () => {
       likes: 1301,
       comments: 25,
       bookmarks: 70,
+      image: require('./assets/images/default_post.png'),
+      profileImage: require('./assets/images/default_profile.png'),
       id: 2,
     },
     {
@@ -108,6 +115,8 @@ const App = () => {
       likes: 100,
       comments: 8,
       bookmarks: 3,
+      image: require('./assets/images/default_post.png'),
+      profileImage: require('./assets/images/default_profile.png'),
       id: 3,
     },
     {
@@ -117,6 +126,8 @@ const App = () => {
       likes: 200,
       comments: 16,
       bookmarks: 7,
+      image: require('./assets/images/default_post.png'),
+      profileImage: require('./assets/images/default_profile.png'),
       id: 4,
     },
     {
@@ -126,6 +137,8 @@ const App = () => {
       likes: 2000,
       comments: 32,
       bookmarks: 12,
+      image: require('./assets/images/default_post.png'),
+      profileImage: require('./assets/images/default_profile.png'),
       id: 5,
     },
   ];
@@ -222,10 +235,24 @@ const App = () => {
       </View>
       {/* POSTS */}
       <View>
-        <FlatList>
-          {' '}
-          data={} renderItem={item => {}}
-        </FlatList>
+        <FlatList
+          data={userPosts}
+          renderItem={(
+            {item}, // Corrected this line
+          ) => (
+            <UserPost
+              key={'userPost' + item.id}
+              image={item.image}
+              firstName={item.firstName}
+              lastName={item.lastName}
+              location={item.location}
+              likes={item.likes}
+              comments={item.comments}
+              bookmarks={item.bookmarks}
+            />
+          )}
+          keyExtractor={item => item.id.toString()} // Added for unique key extraction
+        />
       </View>
     </SafeAreaView>
   );
