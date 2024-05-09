@@ -234,22 +234,26 @@ const App = () => {
         />
       </View>
       {/* POSTS */}
-      <View style={globalStyle.userPostContainer}>
+      <View>
         <FlatList
+          // ListHeaderComponent={}
+          showsVerticalScrollIndicator={false}
           style={globalStyle.userPostContainer}
           data={userPosts}
           renderItem={({item}) => (
-            <UserPost
-              key={'userPost' + item.id}
-              image={item.image}
-              firstName={item.firstName}
-              lastName={item.lastName}
-              location={item.location}
-              likes={item.likes}
-              comments={item.comments}
-              bookmarks={item.bookmarks}
-              profileImage={item.profileImage}
-            />
+            <View style={globalStyle.userPostContainer}>
+              <UserPost
+                key={'userPost' + item.id}
+                image={item.image}
+                firstName={item.firstName}
+                lastName={item.lastName}
+                location={item.location}
+                likes={item.likes}
+                comments={item.comments}
+                bookmarks={item.bookmarks}
+                profileImage={item.profileImage}
+              />
+            </View>
           )}
           keyExtractor={item => item.id.toString()}
         />
