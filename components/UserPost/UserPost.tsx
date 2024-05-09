@@ -1,5 +1,7 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
-import {View} from 'react-native';
+import {Text, View} from 'react-native';
 import UserProfileImage from '../UserProfileImage/UserProfileImage';
 
 type Props = {
@@ -14,12 +16,31 @@ type Props = {
 };
 
 const UserPost = (props: Props) => {
-  const {firstName, lastName, location, image, likes, comments, bookmarks} =
-    props;
+  const {
+    firstName,
+    lastName,
+    location,
+    image,
+    likes,
+    comments,
+    bookmarks,
+    profileImage,
+  } = props;
 
   return (
-    <View>
-      <UserProfileImage profileImage={} imageDimensions={48} />
+    <View
+      style={{
+        flexDirection: 'row',
+      }}>
+      <UserProfileImage
+        profileImage={props.profileImage}
+        imageDimensions={48}
+      />
+      <View>
+        <Text>
+          {firstName} {lastName}
+        </Text>
+      </View>
     </View>
   );
 };

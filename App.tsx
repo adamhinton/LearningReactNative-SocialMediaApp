@@ -236,6 +236,7 @@ const App = () => {
       {/* POSTS */}
       <View>
         <FlatList
+          style={globalStyle.userPostContainer}
           data={userPosts}
           renderItem={(
             {item}, // Corrected this line
@@ -249,6 +250,7 @@ const App = () => {
               likes={item.likes}
               comments={item.comments}
               bookmarks={item.bookmarks}
+              profileImage={item.profileImage}
             />
           )}
           keyExtractor={item => item.id.toString()} // Added for unique key extraction
