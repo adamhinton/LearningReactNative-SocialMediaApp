@@ -187,56 +187,66 @@ const App = () => {
 
   return (
     <SafeAreaView>
-      <View style={globalStyle.header}>
-        {/* TITLE */}
-        <Title title={"Let's explore"} />
-        {/* MESSAGE */}
-        <TouchableOpacity style={globalStyle.messageIcon}>
-          <FontAwesomeIcon icon={faEnvelope} size={20} color="#898DAE" />
-          <View style={globalStyle.messageNumberContainer}>
-            <Text style={globalStyle.messageNumber}>2</Text>
-          </View>
-        </TouchableOpacity>
-      </View>
-      {/* FRIENDS */}
-      <View style={globalStyle.userStoryContainer}>
-        <FlatList
-          // 0.5 means 50%
-          onEndReachedThreshold={0.5}
-          onEndReached={() => {
-            if (isLoadingUserStories) {
-              return;
-            }
-            setIsLoadingUserStories(true);
-            const contentToAppend = pagination(
-              userStories,
-              userStoriesCurrentPage + 1,
-              userStoriesPageSize,
-            );
-            if (contentToAppend.length > 0) {
-              setUserStoriesCurrentPage(userStoriesCurrentPage + 1);
-              setUserStoriesRenderedData(prev => [...prev, ...contentToAppend]);
-            }
-            setIsLoadingUserStories(false);
-          }}
-          horizontal={true}
-          showsHorizontalScrollIndicator={false}
-          data={userStoriesRenderedData}
-          renderItem={({item}) => {
-            return (
-              <UserStory
-                key={'userStory' + item.id}
-                profileImage={item.profileImage}
-                firstName={item.firstName}
-              />
-            );
-          }}
-        />
-      </View>
       {/* POSTS */}
       <View>
         <FlatList
-          // ListHeaderComponent={}
+          ListHeaderComponent={
+            <>
+              <View style={globalStyle.header}>
+                {/* TITLE */}
+                <Title title={"Let's explore"} />
+                {/* MESSAGE */}
+                <TouchableOpacity style={globalStyle.messageIcon}>
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    size={20}
+                    color="#898DAE"
+                  />
+                  <View style={globalStyle.messageNumberContainer}>
+                    <Text style={globalStyle.messageNumber}>2</Text>
+                  </View>
+                </TouchableOpacity>
+              </View>
+              {/* FRIENDS */}
+              <View style={globalStyle.userStoryContainer}>
+                <FlatList
+                  // 0.5 means 50%
+                  onEndReachedThreshold={0.5}
+                  onEndReached={() => {
+                    if (isLoadingUserStories) {
+                      return;
+                    }
+                    setIsLoadingUserStories(true);
+                    const contentToAppend = pagination(
+                      userStories,
+                      userStoriesCurrentPage + 1,
+                      userStoriesPageSize,
+                    );
+                    if (contentToAppend.length > 0) {
+                      setUserStoriesCurrentPage(userStoriesCurrentPage + 1);
+                      setUserStoriesRenderedData(prev => [
+                        ...prev,
+                        ...contentToAppend,
+                      ]);
+                    }
+                    setIsLoadingUserStories(false);
+                  }}
+                  horizontal={true}
+                  showsHorizontalScrollIndicator={false}
+                  data={userStoriesRenderedData}
+                  renderItem={({item}) => {
+                    return (
+                      <UserStory
+                        key={'userStory' + item.id}
+                        profileImage={item.profileImage}
+                        firstName={item.firstName}
+                      />
+                    );
+                  }}
+                />
+              </View>
+            </>
+          }
           showsVerticalScrollIndicator={false}
           style={globalStyle.userPostContainer}
           data={userPosts}
