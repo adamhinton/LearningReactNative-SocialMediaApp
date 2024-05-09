@@ -234,13 +234,11 @@ const App = () => {
         />
       </View>
       {/* POSTS */}
-      <View>
+      <View style={globalStyle.userPostContainer}>
         <FlatList
           style={globalStyle.userPostContainer}
           data={userPosts}
-          renderItem={(
-            {item}, // Corrected this line
-          ) => (
+          renderItem={({item}) => (
             <UserPost
               key={'userPost' + item.id}
               image={item.image}
@@ -253,7 +251,7 @@ const App = () => {
               profileImage={item.profileImage}
             />
           )}
-          keyExtractor={item => item.id.toString()} // Added for unique key extraction
+          keyExtractor={item => item.id.toString()}
         />
       </View>
     </SafeAreaView>

@@ -3,6 +3,8 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import UserProfileImage from '../UserProfileImage/UserProfileImage';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faEllipsisH} from '@fortawesome/free-solid-svg-icons';
 
 type Props = {
   firstName: string;
@@ -31,16 +33,26 @@ const UserPost = (props: Props) => {
     <View
       style={{
         flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
       }}>
-      <UserProfileImage
-        profileImage={props.profileImage}
-        imageDimensions={48}
-      />
       <View>
-        <Text>
-          {firstName} {lastName}
-        </Text>
+        <UserProfileImage
+          profileImage={props.profileImage}
+          imageDimensions={48}
+        />
+        <View
+          style={{
+            justifyContent: 'center',
+            marginLeft: 10,
+          }}>
+          <Text>
+            {firstName} {lastName}
+          </Text>
+          {location && <Text>{location}</Text>}
+        </View>
       </View>
+      <FontAwesomeIcon icon={faEllipsisH} />
     </View>
   );
 };
