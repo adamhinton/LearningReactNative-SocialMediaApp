@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useEffect, useState} from 'react';
 import {
   FlatList,
@@ -262,6 +261,25 @@ const App = () => {
           showsVerticalScrollIndicator={false}
           style={globalStyle.userPostContainer}
           data={userPostsRenderedData}
+          onEndReachedThreshold={0.5}
+          onEndReached={() => {
+            if (isLoadingUserPosts) {
+              return;
+            }
+            setIsLoadingUserPosts(true);
+            const contentToAppend = pagination(
+              userPosts,
+              userPostsCurrentPage + 1,
+              userPostsPageSize,
+            );
+            if (contentToAppend.length > 0) {
+              setUserPostsCurrentPage(userPostsCurrentPage + 1);
+              setUserPostsRenderedData(
+                prev => [...prev, ...contentToAppend] as UserPostType[],
+              );
+            }
+            setIsLoadingUserPosts(false);
+          }}
           renderItem={({item}) => (
             <View style={globalStyle.userPostContainer}>
               <UserPost
