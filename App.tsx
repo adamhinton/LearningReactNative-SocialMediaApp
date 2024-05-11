@@ -161,11 +161,11 @@ const App = () => {
 
   // Subsection of UserSTorys
   const pagination = (
-    database: UserStoryType[],
+    database: UserStoryType[] | UserPostType[],
     currentPage: number,
     // UserStorys per page
     pageSize: number,
-  ): UserStoryType[] => {
+  ): UserStoryType[] | UserPostType[] => {
     const startIndex = (currentPage - 1) * pageSize;
     const endIndex = startIndex + pageSize;
     if (startIndex >= database.length) {
@@ -182,6 +182,18 @@ const App = () => {
     setUserStoriesRenderedData(getInitialData);
 
     setIsLoadingUserStories(false);
+
+    // 0000000
+    setIsLoadingUserPosts(true);
+
+    const getInitialDataPosts = pagination(
+      userPosts,
+      1,
+      userPostsPageSize,
+    ) as UserPostType[];
+    setUserPostsRenderedData(getInitialDataPosts);
+
+    setIsLoadingUserPosts(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -249,7 +261,7 @@ const App = () => {
           }
           showsVerticalScrollIndicator={false}
           style={globalStyle.userPostContainer}
-          data={userPosts}
+          data={userPostsRenderedData}
           renderItem={({item}) => (
             <View style={globalStyle.userPostContainer}>
               <UserPost
