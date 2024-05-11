@@ -152,7 +152,7 @@ const App = () => {
   const [isLoadingUserStories, setIsLoadingUserStories] = useState(false);
 
   // num userPosts per render
-  const userPostsPageSize = 4;
+  const userPostsPageSize = 2;
   const [userPostsCurrentPage, setUserPostsCurrentPage] = useState(1);
   const [userPostsRenderedData, setUserPostsRenderedData] = useState<
     UserPostType[]

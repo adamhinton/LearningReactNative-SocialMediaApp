@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {StyleSheet} from 'react-native';
 import {getFontFamily} from '../../assets/fonts/helper';
+import UserPost from './UserPost';
 
 const style = StyleSheet.create({
   userPostContainer: {
@@ -12,6 +14,13 @@ const style = StyleSheet.create({
     marginLeft: 10,
     flexDirection: 'row',
   },
+  userPostStatsButton: {
+    flexDirection: 'row',
+  },
+  userPostStatsButtonRight: {
+    flexDirection: 'row',
+    marginLeft: 27,
+  },
   userContainer: {
     flexDirection: 'row',
   },
@@ -19,6 +28,10 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     marginLeft: 10,
     // backgroundColor: 'red',
+  },
+  userPostStatText: {
+    marginLeft: 3,
+    color: '79869F',
   },
   user: {
     flexDirection: 'row',
