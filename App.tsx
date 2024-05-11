@@ -271,7 +271,7 @@ const App = () => {
               userPosts,
               userPostsCurrentPage + 1,
               userPostsPageSize,
-            ) as UserPostType[];
+            );
             if (contentToAppend.length > 0) {
               setUserPostsCurrentPage(userPostsCurrentPage + 1);
               setUserPostsRenderedData(prev => [...prev, ...contentToAppend]);
