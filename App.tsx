@@ -159,12 +159,12 @@ const App = () => {
   const [isLoadingUserPosts, setIsLoadingUserPosts] = useState(false);
 
   // Subsection of UserSTorys
-  const pagination = (
-    database: UserStoryType[] | UserPostType[],
+  const pagination = <T extends UserPostType | UserStoryType>(
+    database: T[],
     currentPage: number,
     // UserStorys per page
     pageSize: number,
-  ): UserStoryType[] | UserPostType[] => {
+  ): T[] => {
     const startIndex = (currentPage - 1) * pageSize;
     const endIndex = startIndex + pageSize;
     if (startIndex >= database.length) {
@@ -271,12 +271,10 @@ const App = () => {
               userPosts,
               userPostsCurrentPage + 1,
               userPostsPageSize,
-            );
+            ) as UserPostType[];
             if (contentToAppend.length > 0) {
               setUserPostsCurrentPage(userPostsCurrentPage + 1);
-              setUserPostsRenderedData(
-                prev => [...prev, ...contentToAppend] as UserPostType[],
-              );
+              setUserPostsRenderedData(prev => [...prev, ...contentToAppend]);
             }
             setIsLoadingUserPosts(false);
           }}
