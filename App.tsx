@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useEffect, useState} from 'react';
 import {
   FlatList,
@@ -6,6 +7,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Dimensions,
 } from 'react-native';
 import Title from './components/Title/Title';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
@@ -158,6 +160,10 @@ const App = () => {
   >([]);
   const [isLoadingUserPosts, setIsLoadingUserPosts] = useState(false);
 
+  const [screenData, setScreenData] = useState(Dimensions.get('screen'));
+
+  console.log('screenData:', screenData);
+
   // Subsection of UserSTorys
   const pagination = <T extends UserPostType | UserStoryType>(
     database: T[],
@@ -174,6 +180,7 @@ const App = () => {
     return database.slice(startIndex, endIndex);
   };
 
+  // USER STORIES
   useEffect(() => {
     setIsLoadingUserStories(true);
 
