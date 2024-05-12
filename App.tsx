@@ -6,7 +6,6 @@ import {
   Text,
   TouchableOpacity,
   View,
-  Dimensions,
 } from 'react-native';
 import Title from './components/Title/Title';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
@@ -159,10 +158,6 @@ const App = () => {
   >([]);
   const [isLoadingUserPosts, setIsLoadingUserPosts] = useState(false);
 
-  const [screenData, setScreenData] = useState(Dimensions.get('screen'));
-
-  console.log('screenData:', screenData);
-
   // Subsection of UserSTorys
   const pagination = <T extends UserPostType | UserStoryType>(
     database: T[],
@@ -200,24 +195,11 @@ const App = () => {
 
     setIsLoadingUserPosts(false);
 
-    Dimensions.addEventListener('change', result => {
-      setScreenData(result.screen);
-    });
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <SafeAreaView>
-      <View
-        style={{
-          backgroundColor: 'red',
-          // width: screenData.width / 2,
-          height: screenData.height / 2,
-        }}>
-        <Text>This box will have half of the screen width and height</Text>
-      </View>
-
       {/* POSTS */}
       <View>
         <FlatList
