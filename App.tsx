@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useEffect, useState} from 'react';
 import {
   FlatList,
@@ -200,11 +199,25 @@ const App = () => {
     setUserPostsRenderedData(getInitialDataPosts);
 
     setIsLoadingUserPosts(false);
+
+    Dimensions.addEventListener('change', result => {
+      setScreenData(result.screen);
+    });
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <SafeAreaView>
+      <View
+        style={{
+          backgroundColor: 'red',
+          // width: screenData.width / 2,
+          height: screenData.height / 2,
+        }}>
+        <Text>This box will have half of the screen width and height</Text>
+      </View>
+
       {/* POSTS */}
       <View>
         <FlatList
