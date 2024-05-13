@@ -3,7 +3,7 @@ import {
   FlatList,
   ImageSourcePropType,
   SafeAreaView,
-  Switch,
+  StatusBar,
   Text,
   TouchableOpacity,
   View,
@@ -202,21 +202,13 @@ const App = () => {
 
   return (
     <SafeAreaView>
+      <StatusBar backgroundColor={'red'} barStyle={'light-content'} />
       {/* POSTS */}
       <View>
         <FlatList
           ListHeaderComponent={
             <>
               <View style={globalStyle.header}>
-                <View>
-                  <Switch
-                    style={{
-                      flex: 1,
-                      flexDirection: 'row',
-                      justifyContent: 'flex-start',
-                    }}
-                  />
-                </View>
                 {/* TITLE */}
                 <Title title={"Let's explore"} />
                 {/* MESSAGE */}
