@@ -36,10 +36,10 @@ const globalStyle = StyleSheet.create({
   },
   userStoryContainer: {
     marginTop: verticalScale(20),
-    marginHorizontal: horizontalScale(28),
+    marginHorizontal: horizontalScale(10),
   },
   userPostContainer: {
-    marginHorizontal: horizontalScale(24),
+    marginHorizontal: horizontalScale(10),
   },
 });
 

@@ -3,6 +3,7 @@ import {
   FlatList,
   ImageSourcePropType,
   SafeAreaView,
+  Switch,
   Text,
   TouchableOpacity,
   View,
@@ -207,6 +208,15 @@ const App = () => {
           ListHeaderComponent={
             <>
               <View style={globalStyle.header}>
+                <View>
+                  <Switch
+                    style={{
+                      flex: 1,
+                      flexDirection: 'row',
+                      justifyContent: 'flex-start',
+                    }}
+                  />
+                </View>
                 {/* TITLE */}
                 <Title title={"Let's explore"} />
                 {/* MESSAGE */}
