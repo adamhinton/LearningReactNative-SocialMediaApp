@@ -1,44 +1,45 @@
 import {StyleSheet} from 'react-native';
 import {getFontFamily} from '../fonts/helper';
+import {horizontalScale, scaleFontSize, verticalScale} from './scaling';
 
 const globalStyle = StyleSheet.create({
   header: {
-    marginLeft: 27,
-    marginRight: 17,
-    marginTop: 30,
+    marginLeft: horizontalScale(27),
+    marginRight: horizontalScale(17),
+    marginTop: verticalScale(30),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
   messageIcon: {
-    padding: 14,
+    padding: horizontalScale(14),
     // I changed this to make it easier to see
     backgroundColor: '#bfd2e4',
-    borderRadius: 100,
+    borderRadius: horizontalScale(100),
   },
   messageNumberContainer: {
     backgroundColor: '#F35BAC',
     justifyContent: 'center',
     flexDirection: 'row',
-    width: 10,
-    height: 10,
-    borderRadius: 10,
+    width: horizontalScale(10),
+    height: horizontalScale(10),
+    borderRadius: horizontalScale(10),
     alignItems: 'center',
     position: 'absolute',
-    right: 10,
-    top: 12,
+    right: horizontalScale(10),
+    top: verticalScale(10),
   },
   messageNumber: {
     color: 'white',
-    fontSize: 6,
+    fontSize: scaleFontSize(6),
     fontFamily: getFontFamily('Inter', '600'),
   },
   userStoryContainer: {
-    marginTop: 20,
-    marginHorizontal: 28,
+    marginTop: verticalScale(20),
+    marginHorizontal: horizontalScale(28),
   },
   userPostContainer: {
-    marginHorizontal: 24,
+    marginHorizontal: horizontalScale(24),
   },
 });
 
