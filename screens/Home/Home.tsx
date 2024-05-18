@@ -15,6 +15,7 @@ import style from './style';
 import UserStory from '../../components/UserStory/UserStory';
 import UserPost from '../../components/UserPost/UserPost';
 import {scaleFontSize} from '../../assets/styles/scaling';
+import globalStyle from '../../assets/styles/globalStyle';
 
 // each userstory batch will contain four items
 export type UserStoryType = {
@@ -200,7 +201,7 @@ const Home = () => {
   }, []);
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={globalStyle.backgroundWhite}>
       <StatusBar backgroundColor={'red'} barStyle={'dark-content'} />
       {/* POSTS */}
       <View>
