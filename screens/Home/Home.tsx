@@ -15,10 +15,8 @@ import style from './style';
 import UserStory from '../../components/UserStory/UserStory';
 import UserPost from '../../components/UserPost/UserPost';
 import {scaleFontSize} from '../../assets/styles/scaling';
-import {NavigationContainer} from '@react-navigation/native';
 
 // each userstory batch will contain four items
-
 export type UserStoryType = {
   firstName: string;
   id?: number;
@@ -202,109 +200,107 @@ const App = () => {
   }, []);
 
   return (
-    <NavigationContainer>
-      <SafeAreaView>
-        <StatusBar backgroundColor={'red'} barStyle={'dark-content'} />
-        {/* POSTS */}
-        <View>
-          <FlatList
-            ListHeaderComponent={
-              <>
-                <View style={style.header}>
-                  {/* TITLE */}
-                  <Title title={"Let's explore"} />
-                  {/* MESSAGE */}
-                  <TouchableOpacity style={style.messageIcon}>
-                    <FontAwesomeIcon
-                      icon={faEnvelope}
-                      size={scaleFontSize(20)}
-                      color="#898DAE"
-                    />
-                    <View style={style.messageNumberContainer}>
-                      <Text style={style.messageNumber}>2</Text>
-                    </View>
-                  </TouchableOpacity>
-                </View>
-                {/* FRIENDS */}
-                <View style={style.userStoryContainer}>
-                  <FlatList
-                    // 0.5 means 50%
-                    onEndReachedThreshold={0.5}
-                    onEndReached={() => {
-                      if (isLoadingUserStories) {
-                        return;
-                      }
-                      setIsLoadingUserStories(true);
-                      const contentToAppend = pagination(
-                        userStories,
-                        userStoriesCurrentPage + 1,
-                        userStoriesPageSize,
-                      );
-                      if (contentToAppend.length > 0) {
-                        setUserStoriesCurrentPage(userStoriesCurrentPage + 1);
-                        setUserStoriesRenderedData(prev => [
-                          ...prev,
-                          ...contentToAppend,
-                        ]);
-                      }
-                      setIsLoadingUserStories(false);
-                    }}
-                    horizontal={true}
-                    showsHorizontalScrollIndicator={false}
-                    data={userStoriesRenderedData}
-                    renderItem={({item}) => {
-                      return (
-                        <UserStory
-                          key={'userStory' + item.id}
-                          profileImage={item.profileImage}
-                          firstName={item.firstName}
-                        />
-                      );
-                    }}
+    <SafeAreaView>
+      <StatusBar backgroundColor={'red'} barStyle={'dark-content'} />
+      {/* POSTS */}
+      <View>
+        <FlatList
+          ListHeaderComponent={
+            <>
+              <View style={style.header}>
+                {/* TITLE */}
+                <Title title={"Let's explore"} />
+                {/* MESSAGE */}
+                <TouchableOpacity style={style.messageIcon}>
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    size={scaleFontSize(20)}
+                    color="#898DAE"
                   />
-                </View>
-              </>
-            }
-            showsVerticalScrollIndicator={false}
-            style={style.userPostContainer}
-            data={userPostsRenderedData}
-            onEndReachedThreshold={0.5}
-            onEndReached={() => {
-              if (isLoadingUserPosts) {
-                return;
-              }
-              setIsLoadingUserPosts(true);
-              const contentToAppend = pagination(
-                userPosts,
-                userPostsCurrentPage + 1,
-                userPostsPageSize,
-              );
-              if (contentToAppend.length > 0) {
-                setUserPostsCurrentPage(userPostsCurrentPage + 1);
-                setUserPostsRenderedData(prev => [...prev, ...contentToAppend]);
-              }
-              setIsLoadingUserPosts(false);
-            }}
-            renderItem={({item}) => (
-              <View style={style.userPostContainer}>
-                <UserPost
-                  key={'userPost' + item.id}
-                  image={item.image}
-                  firstName={item.firstName}
-                  lastName={item.lastName}
-                  location={item.location}
-                  likes={item.likes}
-                  comments={item.comments}
-                  bookmarks={item.bookmarks}
-                  profileImage={item.profileImage}
+                  <View style={style.messageNumberContainer}>
+                    <Text style={style.messageNumber}>2</Text>
+                  </View>
+                </TouchableOpacity>
+              </View>
+              {/* FRIENDS */}
+              <View style={style.userStoryContainer}>
+                <FlatList
+                  // 0.5 means 50%
+                  onEndReachedThreshold={0.5}
+                  onEndReached={() => {
+                    if (isLoadingUserStories) {
+                      return;
+                    }
+                    setIsLoadingUserStories(true);
+                    const contentToAppend = pagination(
+                      userStories,
+                      userStoriesCurrentPage + 1,
+                      userStoriesPageSize,
+                    );
+                    if (contentToAppend.length > 0) {
+                      setUserStoriesCurrentPage(userStoriesCurrentPage + 1);
+                      setUserStoriesRenderedData(prev => [
+                        ...prev,
+                        ...contentToAppend,
+                      ]);
+                    }
+                    setIsLoadingUserStories(false);
+                  }}
+                  horizontal={true}
+                  showsHorizontalScrollIndicator={false}
+                  data={userStoriesRenderedData}
+                  renderItem={({item}) => {
+                    return (
+                      <UserStory
+                        key={'userStory' + item.id}
+                        profileImage={item.profileImage}
+                        firstName={item.firstName}
+                      />
+                    );
+                  }}
                 />
               </View>
-            )}
-            keyExtractor={item => item.id.toString()}
-          />
-        </View>
-      </SafeAreaView>
-    </NavigationContainer>
+            </>
+          }
+          showsVerticalScrollIndicator={false}
+          style={style.userPostContainer}
+          data={userPostsRenderedData}
+          onEndReachedThreshold={0.5}
+          onEndReached={() => {
+            if (isLoadingUserPosts) {
+              return;
+            }
+            setIsLoadingUserPosts(true);
+            const contentToAppend = pagination(
+              userPosts,
+              userPostsCurrentPage + 1,
+              userPostsPageSize,
+            );
+            if (contentToAppend.length > 0) {
+              setUserPostsCurrentPage(userPostsCurrentPage + 1);
+              setUserPostsRenderedData(prev => [...prev, ...contentToAppend]);
+            }
+            setIsLoadingUserPosts(false);
+          }}
+          renderItem={({item}) => (
+            <View style={style.userPostContainer}>
+              <UserPost
+                key={'userPost' + item.id}
+                image={item.image}
+                firstName={item.firstName}
+                lastName={item.lastName}
+                location={item.location}
+                likes={item.likes}
+                comments={item.comments}
+                bookmarks={item.bookmarks}
+                profileImage={item.profileImage}
+              />
+            </View>
+          )}
+          keyExtractor={item => item.id.toString()}
+        />
+      </View>
+    </SafeAreaView>
   );
 };
 
