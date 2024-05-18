@@ -11,7 +11,7 @@ import {
 import Title from '../../components/Title/Title';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
-import globalStyle from '../../assets/styles/globalStyles';
+import style from './style';
 import UserStory from '../../components/UserStory/UserStory';
 import UserPost from '../../components/UserPost/UserPost';
 import {scaleFontSize} from '../../assets/styles/scaling';
@@ -210,23 +210,23 @@ const App = () => {
           <FlatList
             ListHeaderComponent={
               <>
-                <View style={globalStyle.header}>
+                <View style={style.header}>
                   {/* TITLE */}
                   <Title title={"Let's explore"} />
                   {/* MESSAGE */}
-                  <TouchableOpacity style={globalStyle.messageIcon}>
+                  <TouchableOpacity style={style.messageIcon}>
                     <FontAwesomeIcon
                       icon={faEnvelope}
                       size={scaleFontSize(20)}
                       color="#898DAE"
                     />
-                    <View style={globalStyle.messageNumberContainer}>
-                      <Text style={globalStyle.messageNumber}>2</Text>
+                    <View style={style.messageNumberContainer}>
+                      <Text style={style.messageNumber}>2</Text>
                     </View>
                   </TouchableOpacity>
                 </View>
                 {/* FRIENDS */}
-                <View style={globalStyle.userStoryContainer}>
+                <View style={style.userStoryContainer}>
                   <FlatList
                     // 0.5 means 50%
                     onEndReachedThreshold={0.5}
@@ -266,7 +266,7 @@ const App = () => {
               </>
             }
             showsVerticalScrollIndicator={false}
-            style={globalStyle.userPostContainer}
+            style={style.userPostContainer}
             data={userPostsRenderedData}
             onEndReachedThreshold={0.5}
             onEndReached={() => {
@@ -286,7 +286,7 @@ const App = () => {
               setIsLoadingUserPosts(false);
             }}
             renderItem={({item}) => (
-              <View style={globalStyle.userPostContainer}>
+              <View style={style.userPostContainer}>
                 <UserPost
                   key={'userPost' + item.id}
                   image={item.image}
