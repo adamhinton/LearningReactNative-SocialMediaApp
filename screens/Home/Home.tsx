@@ -23,7 +23,7 @@ export type UserStoryType = {
   profileImage: ImageSourcePropType;
 };
 
-const App = () => {
+const Home = () => {
   const userStories: UserStoryType[] = [
     {
       firstName: 'Joseph',
@@ -304,4 +304,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;

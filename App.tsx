@@ -1,13 +1,13 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {Text} from 'react-native';
+import MainNavigation from './navigation/MainNavigation';
 
 // each userstory batch will contain four items
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Text>Hello world</Text>
+      <MainNavigation />
     </NavigationContainer>
   );
 };
