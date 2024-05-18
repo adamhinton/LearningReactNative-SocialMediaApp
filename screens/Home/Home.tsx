@@ -16,6 +16,7 @@ import UserStory from '../../components/UserStory/UserStory';
 import UserPost from '../../components/UserPost/UserPost';
 import {scaleFontSize} from '../../assets/styles/scaling';
 import globalStyle from '../../assets/styles/globalStyle';
+import {Routes} from '../../navigation/Routes';
 
 // each userstory batch will contain four items
 export type UserStoryType = {
@@ -24,7 +25,7 @@ export type UserStoryType = {
   profileImage: ImageSourcePropType;
 };
 
-const Home = () => {
+const Home = ({navigation}) => {
   const userStories: UserStoryType[] = [
     {
       firstName: 'Joseph',
@@ -212,7 +213,11 @@ const Home = () => {
                 {/* TITLE */}
                 <Title title={"Let's explore"} />
                 {/* MESSAGE */}
-                <TouchableOpacity style={style.messageIcon}>
+                <TouchableOpacity
+                  style={style.messageIcon}
+                  onPress={() => {
+                    navigation.navigate(Routes.Profile);
+                  }}>
                   <FontAwesomeIcon
                     icon={faEnvelope}
                     size={scaleFontSize(20)}
