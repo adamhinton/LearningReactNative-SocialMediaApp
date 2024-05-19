@@ -3,6 +3,7 @@ import React from 'react';
 import {Text} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import globalStyle from '../../assets/styles/globalStyle';
+
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
 // @ts-ignore
