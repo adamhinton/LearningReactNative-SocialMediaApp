@@ -40,7 +40,16 @@ const Tab3 = () => {
 
 export const ProfileTabsNavigation = () => {
   return (
-    <ProfileTabs.Navigator>
+    <ProfileTabs.Navigator
+      screenOptions={{
+        tabBarIndicatorStyle: {
+          backgroundColor: 'transparent',
+        },
+        tabBarStyle: {
+          zIndex: 0,
+          elevation: 0,
+        },
+      }}>
       <ProfileTabs.Screen
         name={'Tab1'}
         component={Tab1}
