@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {Text} from 'react-native';
+import style from './style';
 
 type Props = {
   title: string;
@@ -10,7 +11,11 @@ type Props = {
 const ProfileTabsTitle = (props: Props) => {
   const {title} = props;
 
-  return <Text>{title}</Text>;
+  return (
+    <Text style={[style.title, !props.isFocused && style.titleNotFocused]}>
+      {title}
+    </Text>
+  );
 };
 
 export default ProfileTabsTitle;
