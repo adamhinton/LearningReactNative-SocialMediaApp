@@ -5,6 +5,7 @@ import globalStyle from '../../assets/styles/globalStyle';
 import {ScrollView} from 'react-native-gesture-handler';
 import {Image, Text, View} from 'react-native';
 import style from './style';
+import {ProfileTabsNavigation} from '../../navigation/MainNavigation';
 
 // @ts-ignore
 const Profile = ({navigation}) => {
@@ -35,6 +36,10 @@ const Profile = ({navigation}) => {
             <Text style={style.statAmount}>100</Text>
             <Text style={style.statType}>Posts</Text>
           </View>
+        </View>
+
+        <View style={globalStyle.flex}>
+          <ProfileTabsNavigation />
         </View>
       </ScrollView>
     </SafeAreaView>
