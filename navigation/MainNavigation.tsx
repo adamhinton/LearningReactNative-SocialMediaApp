@@ -45,8 +45,8 @@ export const ProfileTabsNavigation = () => {
         name={'Tab1'}
         component={Tab1}
         options={{
-          tabBarLabel: () => {
-            return <ProfileTabsTitle title={'Photos'} />;
+          tabBarLabel: ({focused}: {focused: boolean}) => {
+            return <ProfileTabsTitle isFocused={focused} title={'Photos'} />;
           },
         }}
       />
@@ -54,8 +54,8 @@ export const ProfileTabsNavigation = () => {
         name={'Tab2'}
         component={Tab2}
         options={{
-          tabBarLabel: () => {
-            return <ProfileTabsTitle title={'Videos'} />;
+          tabBarLabel: ({focused}: {focused: boolean}) => {
+            return <ProfileTabsTitle isFocused={focused} title={'Videos'} />;
           },
         }}
       />
@@ -63,8 +63,8 @@ export const ProfileTabsNavigation = () => {
         name={'Tab3'}
         component={Tab3}
         options={{
-          tabBarLabel: () => {
-            return <ProfileTabsTitle title={'Saved'} />;
+          tabBarLabel: ({focused}: {focused: boolean}) => {
+            return <ProfileTabsTitle isFocused={focused} title={'Saved'} />;
           },
         }}
       />

@@ -4,6 +4,7 @@ import {Text} from 'react-native';
 
 type Props = {
   title: string;
+  isFocused: boolean;
 };
 
 const ProfileTabsTitle = (props: Props) => {
