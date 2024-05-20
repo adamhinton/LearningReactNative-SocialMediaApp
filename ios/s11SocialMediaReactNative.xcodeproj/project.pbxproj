@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* s11SocialMediaReactNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* s11SocialMediaReactNativeTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-s11SocialMediaReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-s11SocialMediaReactNative.a */; };
 		0DB998E0BA1D40B28CB063C1 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EA85A6D4A56472C899BA2A9 /* Inter-Medium.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		197B6CA233930F4BA8353334 /* libPods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FBD2A9BA52EE429D13E86A /* libPods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.a */; };
 		1EB8A0DE491E47B7B4AC45BD /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71366F4169114D5491EB2C3F /* Inter-Light.ttf */; };
 		3E3FEC03BDC22B3680749373 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C9B4CA6F02706C9FD4ED75E5 /* PrivacyInfo.xcprivacy */; };
 		528C8EC604AA49B48B87DE8A /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5352C38BE77E4547B6141FA3 /* Inter-Regular.ttf */; };
@@ -20,9 +20,9 @@
 		53870A2707E04A1C81314772 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EB09B310DCB4F7C8C4AA608 /* Inter-Bold.ttf */; };
 		56DA53B7EBC64493AA034B6A /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE94DAED8ED14F12A0FC4B36 /* Inter-SemiBold.ttf */; };
 		74E71F8B573440F5BE473077 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 397FEA2A319F49F7928E23CE /* Inter-Thin.ttf */; };
-		7699B88040F8A987B510C191 /* libPods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		AA1BA8DF5B9C4740B8B19AAE /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5909BD39E5014598A2560351 /* Inter-ExtraLight.ttf */; };
+		CFF2BBE923F1005EF0112BB9 /* libPods-s11SocialMediaReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F75F004199DFD93F951E82 /* libPods-s11SocialMediaReactNative.a */; };
 		DF5F2EBA58534D588A6C5478 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E6C684A6FD34C759A158377 /* Inter-Black.ttf */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +40,8 @@
 		00E356EE1AD99517003FC87E /* s11SocialMediaReactNativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = s11SocialMediaReactNativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* s11SocialMediaReactNativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = s11SocialMediaReactNativeTests.m; sourceTree = "<group>"; };
+		0243E366515CA6B59F44FCE7 /* Pods-s11SocialMediaReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-s11SocialMediaReactNative.debug.xcconfig"; path = "Target Support Files/Pods-s11SocialMediaReactNative/Pods-s11SocialMediaReactNative.debug.xcconfig"; sourceTree = "<group>"; };
+		0F7992FABC1E249D6A0B0588 /* Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.release.xcconfig"; path = "Target Support Files/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* s11SocialMediaReactNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = s11SocialMediaReactNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = s11SocialMediaReactNative/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = s11SocialMediaReactNative/AppDelegate.mm; sourceTree = "<group>"; };
@@ -47,24 +49,22 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = s11SocialMediaReactNative/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = s11SocialMediaReactNative/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = s11SocialMediaReactNative/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA85A6D4A56472C899BA2A9 /* Inter-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Medium.ttf"; path = "../assets/fonts/Inter-Medium.ttf"; sourceTree = "<group>"; };
 		25ADB935B8624CF4932DD76E /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-ExtraBold.ttf"; path = "../assets/fonts/Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
 		397FEA2A319F49F7928E23CE /* Inter-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Thin.ttf"; path = "../assets/fonts/Inter-Thin.ttf"; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-s11SocialMediaReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-s11SocialMediaReactNative.debug.xcconfig"; path = "Target Support Files/Pods-s11SocialMediaReactNative/Pods-s11SocialMediaReactNative.debug.xcconfig"; sourceTree = "<group>"; };
+		3DCC0E25B3AC347474804E29 /* Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5352C38BE77E4547B6141FA3 /* Inter-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Regular.ttf"; path = "../assets/fonts/Inter-Regular.ttf"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-s11SocialMediaReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-s11SocialMediaReactNative.release.xcconfig"; path = "Target Support Files/Pods-s11SocialMediaReactNative/Pods-s11SocialMediaReactNative.release.xcconfig"; sourceTree = "<group>"; };
 		5909BD39E5014598A2560351 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-ExtraLight.ttf"; path = "../assets/fonts/Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-s11SocialMediaReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-s11SocialMediaReactNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB09B310DCB4F7C8C4AA608 /* Inter-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Bold.ttf"; path = "../assets/fonts/Inter-Bold.ttf"; sourceTree = "<group>"; };
 		71366F4169114D5491EB2C3F /* Inter-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Light.ttf"; path = "../assets/fonts/Inter-Light.ttf"; sourceTree = "<group>"; };
 		7E6C684A6FD34C759A158377 /* Inter-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Black.ttf"; path = "../assets/fonts/Inter-Black.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = s11SocialMediaReactNative/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.release.xcconfig"; path = "Target Support Files/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
+		9F8C9E0EAAF7E14269EB573F /* Pods-s11SocialMediaReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-s11SocialMediaReactNative.release.xcconfig"; path = "Target Support Files/Pods-s11SocialMediaReactNative/Pods-s11SocialMediaReactNative.release.xcconfig"; sourceTree = "<group>"; };
 		C9B4CA6F02706C9FD4ED75E5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = s11SocialMediaReactNative/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		CE94DAED8ED14F12A0FC4B36 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-SemiBold.ttf"; path = "../assets/fonts/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F0FBD2A9BA52EE429D13E86A /* libPods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2F75F004199DFD93F951E82 /* libPods-s11SocialMediaReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-s11SocialMediaReactNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.a in Frameworks */,
+				197B6CA233930F4BA8353334 /* libPods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-s11SocialMediaReactNative.a in Frameworks */,
+				CFF2BBE923F1005EF0112BB9 /* libPods-s11SocialMediaReactNative.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-s11SocialMediaReactNative.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.a */,
+				F2F75F004199DFD93F951E82 /* libPods-s11SocialMediaReactNative.a */,
+				F0FBD2A9BA52EE429D13E86A /* libPods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,10 +164,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-s11SocialMediaReactNative.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-s11SocialMediaReactNative.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.release.xcconfig */,
+				0243E366515CA6B59F44FCE7 /* Pods-s11SocialMediaReactNative.debug.xcconfig */,
+				9F8C9E0EAAF7E14269EB573F /* Pods-s11SocialMediaReactNative.release.xcconfig */,
+				3DCC0E25B3AC347474804E29 /* Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.debug.xcconfig */,
+				0F7992FABC1E249D6A0B0588 /* Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -196,12 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "s11SocialMediaReactNativeTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				3AC1C2E3E263D87FE825BF49 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				AE3E44FCE998157D5000F8DC /* [CP] Embed Pods Frameworks */,
+				72DA9B86D19AFDD9639C9A68 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,13 +217,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "s11SocialMediaReactNative" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				A8F19BEB136A64AA4F0633C5 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				572B21FC74CB621695E86B11 /* [CP] Embed Pods Frameworks */,
+				CAB7AA15B9FDE0B95EED8FB4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,24 +316,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative/Pods-s11SocialMediaReactNative-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative/Pods-s11SocialMediaReactNative-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative/Pods-s11SocialMediaReactNative-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		3AC1C2E3E263D87FE825BF49 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -355,7 +338,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		572B21FC74CB621695E86B11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative/Pods-s11SocialMediaReactNative-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative/Pods-s11SocialMediaReactNative-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative/Pods-s11SocialMediaReactNative-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72DA9B86D19AFDD9639C9A68 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8F19BEB136A64AA4F0633C5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -377,7 +394,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
+		AE3E44FCE998157D5000F8DC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -394,7 +411,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		CAB7AA15B9FDE0B95EED8FB4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -409,23 +426,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative/Pods-s11SocialMediaReactNative-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests/Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -461,7 +461,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.debug.xcconfig */;
+			baseConfigurationReference = 3DCC0E25B3AC347474804E29 /* Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -488,7 +488,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.release.xcconfig */;
+			baseConfigurationReference = 0F7992FABC1E249D6A0B0588 /* Pods-s11SocialMediaReactNative-s11SocialMediaReactNativeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -512,7 +512,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-s11SocialMediaReactNative.debug.xcconfig */;
+			baseConfigurationReference = 0243E366515CA6B59F44FCE7 /* Pods-s11SocialMediaReactNative.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -539,7 +539,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-s11SocialMediaReactNative.release.xcconfig */;
+			baseConfigurationReference = 9F8C9E0EAAF7E14269EB573F /* Pods-s11SocialMediaReactNative.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
